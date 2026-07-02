@@ -5,11 +5,13 @@ export default function App() {
     const {
         register,
         handleSubmit,
+        reset,
         formState: { errors },
     } = useForm();
 
     function onSubmit(data) {
-        console.log("Submitting the form", data);
+        console.log(data);
+        reset();
     }
 
     return (
